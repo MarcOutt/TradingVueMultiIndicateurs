@@ -1,0 +1,29 @@
+//@version=4
+study("Multi-Indicator Script", overlay=true)
+
+// Bandes de Bollinger
+length = input(20, title="Bollinger Length")
+mult = input(2.0, title="Bollinger Multiplier")
+src = input(close, title="Bollinger Source")
+basis = sma(src, length)
+bb_upper = basis + mult * stdev(src, length)
+bb_lower = basis - mult * stdev(src, length)
+
+plot(basis, color=color.blue, title="Bollinger Basis")
+plot(bb_upper, color=color.fuchsia, title="Bollinger Upper")
+plot(bb_lower, color=color.fuchsia, title="Bollinger Lower")
+
+// Nouvelle bande de Bollinger avec écart-type ajustable
+length2 = input(160, title="Bollinger Length 2")
+mult2 = input(2.8, title="Bollinger Multiplier 2")
+bb_upper2 = basis + mult2 * stdev(src, length2)
+bb_lower2 = basis - mult2 * stdev(src, length2)
+
+plot(bb_upper2, color=color.orange, title="Bollinger Upper 2")
+plot(bb_lower2, color=color.orange, title="Bollinger Lower 2")
+
+// Moyennes Mobiles
+plot(sma(close, 7), color=color.red, title="MA7")
+plot(sma(close, 20), color=color.green, title="MA20")
+plot(sma(close, 50), color=color.yellow, title="MA50")
+plot(sma(close, 100), color=color.blue, title="MA100")
