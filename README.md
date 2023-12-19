@@ -2,6 +2,11 @@
 Le projet MultiIndicateurTV est un script pour la plateforme TradingView qui regroupe plusieurs indicateurs techniques pour une analyse complète des marchés financiers. Il inclut les célèbres Bandes de Bollinger, une version modifiée avec des écarts types ajustables, ainsi que différentes moyennes mobiles pour offrir une vue détaillée de la tendance et de la volatilité. Que vous soyez un trader débutant ou expérimenté, MultiIndicateurTV vous fournit des outils essentiels pour prendre des décisions éclairées dans vos opérations de trading.
 
 
+## Langage de programmation
+
+Ce script a été écrit en Pine Script, ce langage de script est spécifique à TradingView pour le développement d'indicateurs et de stratégies de trading.
+
+
 ## Indicateurs inclus
 
 ### Bandes de Bollinger
